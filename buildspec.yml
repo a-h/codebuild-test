@@ -19,7 +19,7 @@ phases:
       - echo Entered the build phase...
       - echo Build started on `date`
       - node --version
-      - codebuild-breakpoint
+      - echo CDK version `cdk --version`
       - pwd
       - npm run build
     finally:
