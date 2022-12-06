@@ -2,6 +2,8 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 16
     commands:
       - echo Entered the install phase...
     finally:
@@ -16,6 +18,8 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
+      - node --version
+      - codebuild-breakpoint
       - pwd
       - npm run build
     finally:
